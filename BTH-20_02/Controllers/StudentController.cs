@@ -10,9 +10,14 @@ public class StudentController : Controller
     {
         return View();
     }
+    [HttpPost]
+
+
+  
 
     public IActionResult Render()
     {
         return View();
     }
+    
 }
