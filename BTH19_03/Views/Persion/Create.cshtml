@@ -1,0 +1,29 @@
+@model BTH19_03.Models.Persion
+<h1>New Persion</h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PersionID" class="control-label"></label>
+                <input asp-for="PersionID" class="form-control">
+                <span asp-validation-for="PersionID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersionName" class="control-label"></label>
+                <input asp-for="PersionName" class="form-control">
+                <span asp-validation-for="PersionName" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Save">
+                <a class="btn btn-success" asp-action="Index">List Persion</a>
+            </div>
+
+
+        </form>
+    </div>
+
+
+</div>

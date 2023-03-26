@@ -1,0 +1,26 @@
+@model IEnumerable<BTH19_03.Models.Persion>
+    <p>
+        <a  class="btn btn-success" asp-action="Create">Create a new Persion</a>
+    </p>
+    <table class="table table-all">
+        <tr>
+            <th>PersionID</th>
+            <th>PersionName</th>
+          
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(m => item.PersionID)</td>
+                <td>@Html.DisplayFor(m => item.PersionName)</td>
+          
+            </tr>
+            <td>
+                <a asp-action ="Edit" asp-route-id="@item.PersionID">Success</a>
+                <a asp-action ="Delete" asp-route-id="@item.PersionID">Delete</a>
+            </td>
+        }
+       
+
+
+    </table>

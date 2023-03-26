@@ -1,0 +1,24 @@
+@model BTH19_03.Models.Customer
+@{
+    ViewData["Titlee"] = "Delete";
+}
+<h3> You want delete Customer?</h3>
+<div>
+    <hr>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(ModelExpressionProvider => ModelExpressionProvider.CustomerName);</br>
+             @Html.DisplayNameFor(ModelExpressionProvider => ModelExpressionProvider.CustomerAge);</br>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CustomerName)</br>
+            @Html.DisplayFor(model => model.CustomerAge)</br>
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CustomerID"/>
+        <input type="submit" value="Delete" class="btn btn-danger"/> |
+        <a  class="btn btn_success" asp-action="Index">List Persion</a>
+    </form>
+</div>
