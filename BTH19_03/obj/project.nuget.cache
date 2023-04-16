@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BcPD9/PWL1VPzAC//Sd6Fh9DOsyVNrLsUbcCTYHfp58E+UHdSuaKl15sulVMQ6Ua6pntYDcVQKQajNRgQO0Pcw==",
+  "dgSpecHash": "HO9YjcPxb2IOH+8FrgXUEKZSuowdlGiyvGlPn/MlVvYC4J5+ypX1LOwkq7ZWJBAQAeXFZ8uTZsg9ScdKSzy7PQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Toan\\BTH\\BTH19_03\\BTH19_03.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\Toan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.4\\microsoft.entityframeworkcore.sqlite.7.0.4.nupkg.sha512",
     "C:\\Users\\Toan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.4\\microsoft.entityframeworkcore.sqlite.core.7.0.4.nupkg.sha512",
     "C:\\Users\\Toan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.4\\microsoft.entityframeworkcore.sqlserver.7.0.4.nupkg.sha512",
+    "C:\\Users\\Toan\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.4\\microsoft.entityframeworkcore.tools.7.0.4.nupkg.sha512",
     "C:\\Users\\Toan\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Toan\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\Toan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

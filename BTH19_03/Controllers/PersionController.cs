@@ -2,11 +2,12 @@ using BTH19_03.Data;
 using BTH19_03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-
+using BTH19_03.Models.Process;
 namespace BTH19_03.Controllers
 
 {
     public class PersionController : Controller{
+        StringProcess psr = new StringProcess();
         private readonly ApplicationDbContext _context;
         public PersionController (ApplicationDbContext context)
         {
@@ -21,6 +22,17 @@ namespace BTH19_03.Controllers
 
         public IActionResult Create()
         {
+            var newID = "";
+            if(_context.Persions.Count() == 0){
+
+                newID ="PSR0001";
+            }else{
+                var psrID = _context.Persions.OrderByDescending(c => c.PersionID).First().PersionID;
+                newID = psr.AutoGenerateKey(psrID);
+                
+            }
+            ViewBag.PersionID = newID;
+
             return View();
         }
         [HttpPost]

@@ -7,7 +7,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="PersionID" class="control-label"></label>
-                <input asp-for="PersionID" class="form-control">
+                <input asp-for="PersionID" class="form-control" value="@ViewBag.PersionID" readonly>
                 <span asp-validation-for="PersionID" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -15,6 +15,11 @@
                 <input asp-for="StudentName" class="form-control">
                 <span asp-validation-for="StudentName" class="text-danger"></span>
             </div>
+              <div class="form-group">
+                <label asp-for="StudentAddress" class="control-label"></label>
+                <input asp-for="StudentAddress" class="form-control">
+                <span asp-validation-for="StudentAddress" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <input class="btn btn-primary" type="submit" value="Save">
                 <a class="btn btn-success" asp-action="Index">List Student</a>

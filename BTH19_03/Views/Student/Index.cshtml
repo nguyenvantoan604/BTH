@@ -6,6 +6,7 @@
         <tr>
             <th>StudentID</th>
             <th>StudentName</th>
+            <th>StudentAddress</th>
             
         </tr>
         @foreach (var item in Model)
@@ -13,10 +14,11 @@
             <tr>
                 <td>@Html.DisplayFor(m => item.StudentID)</td>
                 <td>@Html.DisplayFor(m => item.StudentName)</td>
+                <td>@Html.DisplayFor(m => item.StudentAddress)</td>
             </tr>
             <td>
-                <a asp-action ="Edit" asp-route-id="@item.StudentID">Success</a>
-                <a asp-action ="Delete" asp-route-id="@item.StudentID">Delete</a>
+                <a style="background-color: rgb(128, 0, 21);" class="btn" asp-action ="Edit" asp-route-id="@item.StudentID">Success</a>
+                <a style="background-color: rgb(124, 128, 0); "  class="btn" asp-action ="Delete" asp-route-id="@item.StudentID">Delete</a>
             </td>
         }
        

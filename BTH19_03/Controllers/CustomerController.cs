@@ -2,11 +2,13 @@ using BTH19_03.Data;
 using BTH19_03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using BTH19_03.Models.Process;
 
 namespace BTH19_03.Controllers
 
 {
     public class CustomerController : Controller{
+        StringProcess ctm = new StringProcess();
         private readonly ApplicationDbContext _context;
         public CustomerController (ApplicationDbContext context)
         {
@@ -21,6 +23,16 @@ namespace BTH19_03.Controllers
 
         public IActionResult Create()
         {
+            var NewID = "";
+            if(_context.Customers.Count() ==0){
+                NewID ="CTM0001";
+            }else{
+                var ctmID = _context.Customers.OrderByDescending(m => m.CustomerID).First().CustomerID;
+
+                NewID = ctm.AutoGenerateKey(ctmID);
+
+            }
+            ViewBag.CustomerID = NewID;
             return View();
         }
         [HttpPost]

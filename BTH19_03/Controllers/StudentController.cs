@@ -2,11 +2,14 @@ using BTH19_03.Data;
 using BTH19_03.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using BTH19_03.Models.Process;
 
 namespace BTH19_03.Controllers
 
 {
     public class StudentController : Controller{
+
+        StringProcess strPro = new StringProcess();
         private readonly ApplicationDbContext _context;
         public StudentController (ApplicationDbContext context)
         {
@@ -21,12 +24,30 @@ namespace BTH19_03.Controllers
 
         public IActionResult Create()
         {
+                   var newID = "";
+            if (_context.Students.Count() == 0)
+            {
+                newID = "STD0001";
+            }
+            else
+            {
+                var id = _context.Students.OrderByDescending(m => m.StudentID).First().StudentID;
+                newID = strPro.AutoGenerateKey(id);
+            }
+            ViewBag.StudentID = newID; 
             return View();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
 
         public async Task<IActionResult> Create(Student std)
         {
+
+            //  var checkid = await _context.Students.FindAsync(id);
+            //  if(checkid == id){
+            //     return View("NotFuond");
+            //  }
+
             if(ModelState.IsValid)
             {
                 _context.Add(std);
@@ -54,7 +75,7 @@ namespace BTH19_03.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 // Edit
-        public async Task<IActionResult> Edit(string id, [Bind("StudentID,StudentName")] Student std)
+        public async Task<IActionResult> Edit(string id, [Bind("StudentID,StudentName,StudentAddress")] Student std)
         {
             if(id != std.StudentID)
             {
@@ -114,6 +135,8 @@ namespace BTH19_03.Controllers
         {
             return _context.Students.Any(e => e.StudentID ==id);
         }
+        
+       
 
 
     }

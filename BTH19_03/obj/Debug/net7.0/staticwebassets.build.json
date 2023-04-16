@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rtTDhnzpCH4PryDvtX8Z6F3RhJ76z/7H7yWbJ0U+m4c=",
+  "Hash": "sRqxJOMVQQTDZ6HGG2dGKr+c9MpQzwBXBYqsJ/i7OCY=",
   "Source": "BTH19_03",
   "BasePath": "_content/BTH19_03",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Toan\\BTH\\BTH19_03\\wwwroot\\css\\w3.css",
+      "SourceId": "BTH19_03",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Toan\\BTH\\BTH19_03\\wwwroot\\",
+      "BasePath": "_content/BTH19_03",
+      "RelativePath": "css/w3.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\w3.css"
     },
     {
       "Identity": "C:\\Users\\Toan\\BTH\\BTH19_03\\wwwroot\\favicon.ico",
