@@ -11,7 +11,8 @@ public class ApplicationDbContext : DbContext
     }
     public DbSet<Student> Students {get; set;}
     public DbSet<Persion> Persions {get;set;}
-
-
     public DbSet<Customer> Customers {get;set;}
+    public DbSet<Faculty> Faculty {get;set;} = default;
+
+
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZCXmVSrD2pgeyPQFyzbcOWgIn1c8Oz1ixLiz9g7hoE4=",
+  "Hash": "XFU59gxF1rNYS7Wld817uEGKZ5rr1CLMVEVIrs7GeW0=",
   "Source": "BaiThucHanh0703",
   "BasePath": "_content/BaiThucHanh0703",
   "Mode": "Default",
@@ -66,23 +66,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\Toan\\BTH\\BaiThucHanh0703\\wwwroot\\css\\w3.css",
-      "SourceId": "BaiThucHanh0703",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Toan\\BTH\\BaiThucHanh0703\\wwwroot\\",
-      "BasePath": "_content/BaiThucHanh0703",
-      "RelativePath": "css/w3.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\w3.css"
     },
     {
       "Identity": "C:\\Users\\Toan\\BTH\\BaiThucHanh0703\\wwwroot\\favicon.ico",

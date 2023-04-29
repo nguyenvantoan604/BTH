@@ -34,22 +34,18 @@ namespace BTH19_03.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("BTH19_03.Models.Employee", b =>
+            modelBuilder.Entity("BTH19_03.Models.Faculty", b =>
                 {
-                    b.Property<string>("EmployeeID")
+                    b.Property<string>("FacultyID")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("EmployeeAddress")
+                    b.Property<string>("FacultyName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("EmployeeName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.HasKey("FacultyID");
 
-                    b.HasKey("EmployeeID");
-
-                    b.ToTable("Employees");
+                    b.ToTable("Faculty");
                 });
 
             modelBuilder.Entity("BTH19_03.Models.Persion", b =>
@@ -71,6 +67,10 @@ namespace BTH19_03.Migrations
                     b.Property<string>("StudentID")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("FacultyID")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("StudentAddress")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -81,7 +81,20 @@ namespace BTH19_03.Migrations
 
                     b.HasKey("StudentID");
 
+                    b.HasIndex("FacultyID");
+
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("BTH19_03.Models.Student", b =>
+                {
+                    b.HasOne("BTH19_03.Models.Faculty", "Faculty")
+                        .WithMany()
+                        .HasForeignKey("FacultyID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Faculty");
                 });
 #pragma warning restore 612, 618
         }

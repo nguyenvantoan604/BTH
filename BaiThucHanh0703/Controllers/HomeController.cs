@@ -3,10 +3,14 @@ using Microsoft.AspNetCore.Mvc;
 using BaiThucHanh0703.Models;
 
 namespace BaiThucHanh0703.Controllers;
+using BaiThucHanh0703.Models.Process;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    GiaiPhuongTrinhBac2 gpt = new GiaiPhuongTrinhBac2();
+
+    
 
     public HomeController(ILogger<HomeController> logger)
     {
@@ -17,6 +21,15 @@ public class HomeController : Controller
     {
         return View();
     }
+    [HttpPost]
+        public IActionResult Index(string FullName)
+    {
+
+        string render = gpt.LowUper2(FullName);
+        ViewBag.output = render;
+        return View();
+    }
+
 
     public IActionResult Privacy()
     {
